@@ -2,7 +2,7 @@
     "name": "书包网",
     "url": "https://www.bookbao99.net/",
     "version": 100
-    "search": {
+    "search":{
         "url": "https://www.bookbao99.net/Search/q_${key}",
         "charset": "utf-8",
         "list": "div.search_box > ul > li > div.txt",
@@ -12,18 +12,18 @@
         "summary": "div",
         "detail": "span > a"
     }
-    "detail": {
+    "detail":{
         "name": "div.info > h1",
         "author": "div.info > p > a",
         "cover": ".fmimg > img",
         "catalog": ".all-catalog"
     }
-    "catalog": {
+    "catalog":{
         "list": ".wp b2 info_chapterlist > ul >li",
         "name": "a",
         "chapter": "a"
     }
-    "chapter": {
+    "chapter":{
         "content": ".bdsub > dl > dd"
     }
 }
