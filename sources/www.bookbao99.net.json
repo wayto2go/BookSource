@@ -1,7 +1,7 @@
 {
     "name": "书包网",
     "url": "www.bookbao99.net",
-    "version": 101,
+    "version": 102,
     "search": {
         "url": "https://www.bookbao99.net/Search/q_${key}",
         "list": "div.search_box > ul > li > div.txt",
@@ -17,7 +17,7 @@
         "summary": "div:nth-child(5) > div.infocontent"
     },
     "catalog": {
-        "list": "div:nth-child(7) > ul",
+        "list": "div:nth-child(7) > ul > li",
         "name": "div:nth-child(7) > ul > li:nth-child(1) > a",
         "chapter": "div:nth-child(7) > ul > li:nth-child(1) > a"
     },
