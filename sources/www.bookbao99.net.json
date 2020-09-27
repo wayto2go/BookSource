@@ -1,28 +1,28 @@
 {
-    "name": "有兔阅读",
-    "url": "app.youzibank.com",
+    "name": "书包网",
+    "url": "www.bookbao99.net",
     "version": 100,
     "search": {
-        "url": "http://app.youzibank.com/es/search/book?pageNo=1&pageSize=10&q=${key}@header->Seq:3b28f4be398947da273c3d1ec2c2fb8b",
-        "list": "$.data[*]",
-        "name": "$.name",
-        "author": "$.author",
-        "cover": "https://book.chengxinqinye.com/book${$.photoPath}",
-        "detail": "/book/info?bookId=${$.id}@header->Seq:3b28f4be398947da273c3d1ec2c2fb8b"
+        "url": "https://www.bookbao99.net/Search/q_${key}",
+        "list": "div.search_box > ul > li > div.txt",
+        "name": ".t > a:nth-child(1)",
+        "author": ".t > div> span:nth-child(1)",
+        "cover": "div.search_box > ul > li > div.pic > a",
+        "detail": "span > a"
     },
     "detail": {
-        "name": "$.data[0].name",
-        "author": "$.data[0].author",
-        "cover": "https://book.chengxinqinye.com/book${$.data[0].photoPath}",
+        "name": "div.info > h1",
+        "author": "div.info > p > a",
+        "cover": ".fmimg > img",
         "summary": "$.data[0].intro",
-        "status": "$.data[0].fullFlag@equal->3",
-        "update": "$.data[0].lastUpdate",
-        "catalog": "/book/chapter/listAll?bookId=${$.data[0].id}"
+        "catalog": ".all-catalog"
     },
     "catalog": {
-        "list": "$.data",
-        "name": "$.name",
-        "chapter": "http://book.chengxinqinye.com/book${$.filePath}"
+        "list": ".wp b2 info_chapterlist > ul >li",
+        "name": "a",
+        "chapter": "a"
     },
-    "chapter": {}
+    "chapter": {
+        "content": ".bdsub > dl > dd"
+    }
 }
