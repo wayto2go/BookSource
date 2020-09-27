@@ -1,28 +1,27 @@
 {
     "name": "书包网",
     "url": "www.bookbao99.net",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "https://www.bookbao99.net/Search/q_${key}",
         "list": "div.search_box > ul > li > div.txt",
         "name": ".t > a:nth-child(1)",
-        "author": ".t > div> span:nth-child(1)",
-        "cover": "div.search_box > ul > li > div.pic > a",
-        "detail": "span > a"
+        "author": ".txt > div:nth-child(2) > span:nth-child(1)",
+        "cover": ".pic > a > img",
+        "detail": ".txt > span > a"
     },
     "detail": {
-        "name": "div.info > h1",
-        "author": "div.info > p > a",
-        "cover": ".fmimg > img",
-        "summary": "$.data[0].intro",
-        "catalog": ".all-catalog"
+        "name": "#info > h1",
+        "author": "#info > p:nth-child(2) > a",
+        "cover": "#fmimg > img",
+        "summary": "div:nth-child(5) > div.infocontent"
     },
     "catalog": {
-        "list": ".wp b2 info_chapterlist > ul >li",
-        "name": "a",
-        "chapter": "a"
+        "list": "div:nth-child(7) > ul",
+        "name": "div:nth-child(7) > ul > li:nth-child(1) > a",
+        "chapter": "div:nth-child(7) > ul > li:nth-child(1) > a"
     },
     "chapter": {
-        "content": ".bdsub > dl > dd"
+        "content": "#contents"
     }
 }
