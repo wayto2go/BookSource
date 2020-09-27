@@ -1,0 +1,59 @@
+{
+    "name": "书包网",
+    "url": "https://www.bookbao99.net/",
+    "version": 100
+    //2.基础信息
+    "search": {
+        "url": "https://www.bookbao99.net/Search/q_${key}",
+        "charset": "utf-8",
+        //3.搜索
+        //列表 必填
+        "list": "div.search_box > ul > li > div.txt",
+        //书名 必填
+        "name": ".t > a:nth-child(1)",
+        //作者 选填
+        "author": ".t > div> span:nth-child(1)",
+        //封面 选填 自动补全URL
+        "cover": "div.search_box > ul > li > div.pic > a",
+        //简介 选填
+        "summary": "div",
+        //详情 必填 自动补全URL
+        "detail": "span > a"
+    }
+    //3.搜索 全部选填
+    "detail": {
+        "name": "div.info > h1",
+        "author": "div.info > p > a",
+        "cover": ".fmimg > img",
+        //"summary": ".book-dec",
+        //"status": ".book-label > a:nth-child(1)",
+        //"update": ".time@match->(?<=·)(.+)(?=·)",
+        //"lastChapter": ".book-new-chapter > .tit > a",
+        //目录 不填视为目录和详情相同地址
+        "catalog": ".all-catalog"
+    }
+    //5.详情
+    "catalog": {
+        //章节 必填 章节或分卷列表
+        "list": ".wp b2 info_chapterlist > ul >li",
+        //"orderBy": 0,
+        //存在分卷描述 本身选填内容必填
+        //"booklet": {
+        //    "name": ".volume@match->(?<=])(.+)(?=共[0-9]+章)",
+        //    "list": "li"
+        //},
+        //章节标题 必填
+        "name": "a",
+        //章节 必填 自动补全url
+        "chapter": "a"
+    }
+    //6.目录
+    "chapter": {
+        //正文 选填 当返回txt文本时不需填写该字段
+        "content": ".bdsub > dl > dd",
+        //屏蔽规则 选填 正则表达式
+        //"purify": ["参考"]
+        //分页 选填 下一页链接元素
+        //"page":
+    }
+}
