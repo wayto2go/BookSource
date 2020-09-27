@@ -12,12 +12,6 @@
         "summary": "div",
         "detail": "span > a"
     }
-    "detail":{
-        "name": "div.info > h1",
-        "author": "div.info > p > a",
-        "cover": ".fmimg > img",
-        "catalog": ".all-catalog"
-    }
     "catalog":{
         "list": ".wp b2 info_chapterlist > ul >li",
         "name": "a",
