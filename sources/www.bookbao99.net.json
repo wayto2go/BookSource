@@ -15,8 +15,7 @@
         "author": "#info > p:nth-child(2) > a",
         "cover": "#fmimg > img",
         "summary": "div:nth-child(5) > div.infocontent",
-        "catalog": "div:nth-child(5) > div.btnzone > a:nth-child(2)",
-        "catalogUrl": "div:nth-child(5) > div.btnzone > a:nth-child(2)"
+        "catalog": "div:nth-child(5) > div.btnzone > a:nth-child(2)"
     },
     "catalog": {
         "list": "#chapterlist > ul > li > a",
